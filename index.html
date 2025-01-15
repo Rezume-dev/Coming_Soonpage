@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI-generated website">
+  <meta name="theme-color" content="#ffffff">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+
+  <!-- Performance optimization: Preload critical resources -->
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    as="style">
+
+  <!-- {headerScripts} -->
+
+  <!-- Core CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f8f8f8',
+              100: '#e8e8e8',
+              200: '#d3d3d3',
+              300: '#a3a3a3',
+              400: '#737373',
+              500: '#525252',
+              600: '#404040',
+              700: '#262626',
+              800: '#171717',
+              900: '#0a0a0a',
+              950: '#030303',
+            },
+            secondary: {
+              50: '#f8f8f8',
+              100: '#e8e8e8',
+              200: '#d3d3d3',
+              300: '#a3a3a3',
+              400: '#737373',
+              500: '#525252',
+              600: '#404040',
+              700: '#262626',
+              800: '#171717',
+              900: '#0a0a0a',
+              950: '#030303',
+            },
+            accent: {
+              50: '#f8f8f8',
+              100: '#e8e8e8',
+              200: '#d3d3d3',
+              300: '#a3a3a3',
+              400: '#737373',
+              500: '#525252',
+              600: '#404040',
+              700: '#262626',
+              800: '#171717',
+              900: '#0a0a0a',
+              950: '#030303',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+            '30': '7.5rem',
+          },
+          maxWidth: {
+            '8xl': '88rem',
+            '9xl': '96rem',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in',
+            'fade-out': 'fadeOut 0.5s ease-out',
+            'slide-up': 'slideUp 0.5s ease-out',
+            'slide-down': 'slideDown 0.5s ease-out',
+            'slide-left': 'slideLeft 0.5s ease-out',
+            'slide-right': 'slideRight 0.5s ease-out',
+            'scale-in': 'scaleIn 0.5s ease-out',
+            'scale-out': 'scaleOut 0.5s ease-out',
+            'spin-slow': 'spin 3s linear infinite',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'bounce-slow': 'bounce 3s infinite',
+            'float': 'float 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            fadeOut: {
+              '0%': { opacity: '1' },
+              '100%': { opacity: '0' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            slideDown: {
+              '0%': { transform: 'translateY(-20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            slideLeft: {
+              '0%': { transform: 'translateX(20px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            },
+            slideRight: {
+              '0%': { transform: 'translateX(-20px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            },
+            scaleIn: {
+              '0%': { transform: 'scale(0.9)', opacity: '0' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            },
+            scaleOut: {
+              '0%': { transform: 'scale(1.1)', opacity: '0' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+          },
+          aspectRatio: {
+            'portrait': '3/4',
+            'landscape': '4/3',
+            'ultrawide': '21/9',
+          },
+        },
+      },
+      variants: {
+        extend: {
+          opacity: ['disabled'],
+          cursor: ['disabled'],
+          backgroundColor: ['active', 'disabled'],
+          textColor: ['active', 'disabled'],
+        },
+      },
+    }
+  </script>
+
+  <!-- Utilities and Components -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+
+  <!-- Optimized Font Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Base Styles -->
+  <style>
+    * {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    /* Webkit browsers like Chrome, Safari, newer Edge */
+    *::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #666;
+    }
+
+    /* Remove tap highlight on mobile */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Improve text rendering */
+    body {
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Focus outline styles */
+    :focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+
+    /* Print styles */
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+
+      a[href]:after {
+        content: " (" attr(href) ")";
+      }
+    }
+  </style>
+
+  <!-- Enhanced Image Handler -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.dataset.src) {
+              const tempImage = new Image();
+              tempImage.onload = () => {
+                img.src = img.dataset.src;
+                img.classList.remove('opacity-0');
+                img.classList.add('opacity-100');
+              };
+              tempImage.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              observer.unobserve(img);
+            }
+          }
+        });
+      }, {
+        rootMargin: '50px 0px',
+        threshold: 0.01
+      });
+
+      const loadImage = (img) => {
+        if ('loading' in HTMLImageElement.prototype) {
+          img.loading = 'lazy';
+        }
+
+        img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+
+        img.onerror = () => {
+          const width = img.getAttribute('width') || img.clientWidth || 300;
+          const height = img.getAttribute('height') || img.clientHeight || 200;
+          img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+          img.alt = 'Image unavailable';
+          img.classList.remove('opacity-0');
+          img.classList.add('opacity-100', 'error-image');
+        };
+
+        if (img.dataset.src) {
+          imageObserver.observe(img);
+        } else {
+          img.classList.remove('opacity-0');
+          img.classList.add('opacity-100');
+        }
+      };
+
+      document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+      // Watch for dynamically added images
+      new MutationObserver((mutations) => {
+        mutations.forEach(mutation => {
+          mutation.addedNodes.forEach(node => {
+            if (node.nodeType === 1) {
+              if (node.tagName === 'IMG') {
+                loadImage(node);
+              }
+              node.querySelectorAll('img').forEach(loadImage);
+            }
+          });
+        });
+      }).observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    });
+
+    // Performance monitoring
+    if ('performance' in window && 'PerformanceObserver' in window) {
+      // Create performance observer
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            // console.log(`LCP: ${entry.startTime}ms`);
+          }
+          if (entry.entryType === 'first-input') {
+            // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+          }
+          if (entry.entryType === 'layout-shift') {
+            // console.log(`CLS: ${entry.value}`);
+          }
+        });
+      });
+
+      // Observe performance metrics
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+      // Log basic performance metrics
+      window.addEventListener('load', () => {
+        const timing = performance.getEntriesByType('navigation')[0];
+        console.log({
+          'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+          'TCP Connection': timing.connectEnd - timing.connectStart,
+          'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+          'Page Load': timing.loadEventEnd - timing.navigationStart
+        });
+      });
+    }
+
+    // Handle offline/online status
+    window.addEventListener('online', () => {
+      document.body.classList.remove('offline');
+      console.log('Connection restored');
+    });
+
+    window.addEventListener('offline', () => {
+      document.body.classList.add('offline');
+      console.log('Connection lost');
+    });
+  </script>
+</head>
+
+<body class="antialiased text-gray-800 min-h-screen flex flex-col">
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+    Skip to main content
+  </a>
+
+  <!-- Header -->
+  <header class="relative z-50 bg-white dark:bg-gray-900">
+    <!-- Header content goes here -->
+  </header>
+
+  <!-- Main content area -->
+  <main id="main-content" class="flex-1 relative ">
+    <!-- Content will be injected here -->
+  </main>
+
+  <!-- {bodyScripts} -->
+
+</body>
+
+</html>
+<element id="6522d86e-2a9a-4d7e-972b-7dad4ec2c37e" data-section-id="6522d86e-2a9a-4d7e-972b-7dad4ec2c37e">
+
+  <htmlCode>
+    <div id="root">
+      <nav id="navbar" class="bg-neutral-900 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16 items-center">
+            <div class="flex-shrink-0">
+              <a href="#" class="text-white font-bold text-xl">Rezume.dev</a>
+            </div>
+
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <a href="#features"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Features</a>
+                <a href="#benefits"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Benefits</a>
+                <a href="#howItWorks"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">How It Works</a>
+                <a href="#testimonials"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Testimonials</a>
+                <a href="#earlyAccess"
+                  class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 animate__animated animate__pulse animate__infinite">Get
+                  Early Access</a>
+              </div>
+            </div>
+
+            <div class="md:hidden">
+              <button id="mobile-menu-button"
+                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-neutral-800 focus:outline-none">
+                <svg id="menu-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-neutral-900">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#features"
+              class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Features</a>
+            <a href="#benefits"
+              class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Benefits</a>
+            <a href="#howItWorks"
+              class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">How It Works</a>
+            <a href="#testimonials"
+              class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Testimonials</a>
+            <a href="#earlyAccess"
+              class="bg-indigo-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-indigo-700">Get
+              Early Access</a>
+          </div>
+        </div>
+      </nav>
+
+      <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+
+          // Toggle between menu and close icons
+          if (mobileMenu.classList.contains('hidden')) {
+            menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />`;
+          } else {
+            menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />`;
+          }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.getElementsByTagName('a');
+        Array.from(mobileLinks).forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />`;
+          });
+        });
+      </script>
+    </div>
+  </htmlCode>
+</element>
+<element id="060825bd-9bf1-4554-8f6c-410f3f047da2" data-section-id="060825bd-9bf1-4554-8f6c-410f3f047da2">
+
+  <htmlCode>
+    <div id="root">
+      <section id="hero" class="bg-neutral-900 min-h-[70vh] pt-16 relative flex items-center">
+        <div class="absolute inset-0">
+          <div class="absolute inset-0 bg-gradient-to-r from-neutral-900 to-neutral-800 opacity-90"></div>
+          <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0aDJ2MmgtMnpNNDAgNDBoMnYyaC0yek00MCAzNGgydjJoLTJ6TTM2IDQwaDJ2MmgtMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20">
+          </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center">
+            <h1
+              class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl animate__animated animate__fadeInDown">
+              <span class="block">Coming Soon</span>
+              <span class="block text-indigo-400">Rezume.dev by CSX</span>
+            </h1>
+
+            <p
+              class="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl animate__animated animate__fadeIn animate__delay-1s">
+              Build Your Perfect Resume in Minutes. Discover Rezume.dev, the AI-powered resume builder designed for
+              every career stage.
+            </p>
+
+            <div
+              class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8 animate__animated animate__fadeInUp animate__delay-1s">
+              <div class="rounded-md shadow">
+                <a href="#earlyAccess"
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                  Get Early Access
+                </a>
+              </div>
+            </div>
+
+            <div class="mt-8 space-y-4 animate__animated animate__fadeIn animate__delay-2s">
+              <div class="inline-flex items-center space-x-2">
+                <svg class="h-5 w-5 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+                <p class="text-gray-300">Simple, fast, and professional resumes</p>
+              </div>
+              <div class="inline-flex items-center space-x-2">
+                <svg class="h-5 w-5 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+                <p class="text-gray-300">AI-powered optimization</p>
+              </div>
+              <div class="inline-flex items-center space-x-2">
+                <svg class="h-5 w-5 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+                <p class="text-gray-300">Stand out from the crowd</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-neutral-900 to-transparent"></div>
+      </section>
+    </div>
+  </htmlCode>
+</element>
+<element id="c00bcf0f-16f5-443f-b729-224940a639d4" data-section-id="c00bcf0f-16f5-443f-b729-224940a639d4">
+
+  <htmlCode>
+    <div id="root">
+      <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-3xl font-extrabold text-neutral-900 sm:text-4xl animate__animated animate__fadeIn">
+              Powerful Features for Your Perfect Resume
+            </h2>
+            <p class="mt-4 text-xl text-neutral-600 animate__animated animate__fadeIn">
+              Everything you need to create a professional, ATS-friendly resume
+            </p>
+          </div>
+
+          <div class="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div
+              class="relative p-6 bg-neutral-50 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 animate__animated animate__fadeInUp">
+              <div class="absolute -top-4 left-4 bg-indigo-600 rounded-lg p-3">
+                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 class="mt-8 text-xl font-medium text-neutral-900">AI-Powered Writing</h3>
+              <p class="mt-4 text-neutral-600">Smart suggestions and auto-completion to help you write compelling
+                content effortlessly.</p>
+            </div>
+
+            <div
+              class="relative p-6 bg-neutral-50 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 animate__animated animate__fadeInUp animate__delay-1s">
+              <div class="absolute -top-4 left-4 bg-indigo-600 rounded-lg p-3">
+                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                </svg>
+              </div>
+              <h3 class="mt-8 text-xl font-medium text-neutral-900">Modern Templates</h3>
+              <p class="mt-4 text-neutral-600">Professional and ATS-optimized templates designed for various industries
+                and roles.</p>
+            </div>
+
+            <div
+              class="relative p-6 bg-neutral-50 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 animate__animated animate__fadeInUp animate__delay-2s">
+              <div class="absolute -top-4 left-4 bg-indigo-600 rounded-lg p-3">
+                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                </svg>
+              </div>
+              <h3 class="mt-8 text-xl font-medium text-neutral-900">Easy Customization</h3>
+              <p class="mt-4 text-neutral-600">Intuitive interface to customize fonts, colors, and layout with real-time
+                preview.</p>
+            </div>
+          </div>
+
+          <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div
+              class="flex items-center justify-center p-8 bg-neutral-50 rounded-xl shadow-sm animate__animated animate__fadeInLeft">
+              <div class="text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-100 mb-6">
+                  <svg class="h-8 w-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 class="text-xl font-medium text-neutral-900">ATS-Friendly Format</h4>
+                <p class="mt-2 text-neutral-600">Ensures your resume passes through Applicant Tracking Systems
+                  successfully.</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center justify-center p-8 bg-neutral-50 rounded-xl shadow-sm animate__animated animate__fadeInRight">
+              <div class="text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-100 mb-6">
+                  <svg class="h-8 w-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                  </svg>
+                </div>
+                <h4 class="text-xl font-medium text-neutral-900">One-Click Export</h4>
+                <p class="mt-2 text-neutral-600">Download your resume in multiple formats including PDF, Word, and plain
+                  text.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </htmlCode>
+</element>
+<element id="4224aac8-633b-497b-802c-2352fd0ae0a4" data-section-id="4224aac8-633b-497b-802c-2352fd0ae0a4">
+
+  <htmlCode>
+    <div id="root">
+      <section id="benefits" class="py-24 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl animate__animated animate__fadeIn">
+              Why Choose Rezume.dev?
+            </h2>
+            <p class="mt-4 text-xl text-gray-300 animate__animated animate__fadeIn">
+              Stand out in the job market with our cutting-edge resume builder
+            </p>
+          </div>
+
+          <div class="mt-20">
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+              <div class="relative animate__animated animate__fadeInUp">
+                <div class="absolute h-full w-1 bg-indigo-600 left-8 top-8 hidden lg:block"></div>
+                <div class="relative bg-neutral-800 rounded-lg p-8 hover:bg-neutral-700 transition-colors duration-300">
+                  <div class="flex items-center mb-4">
+                    <span class="flex items-center justify-center w-12 h-12 bg-indigo-600 rounded-lg">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </span>
+                    <h3 class="ml-4 text-xl font-semibold text-white">Save Time</h3>
+                  </div>
+                  <p class="text-gray-300">Create a professional resume in minutes, not hours. Our AI-powered platform
+                    streamlines the entire process.</p>
+                </div>
+              </div>
+
+              <div class="relative animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="absolute h-full w-1 bg-indigo-600 left-8 top-8 hidden lg:block"></div>
+                <div class="relative bg-neutral-800 rounded-lg p-8 hover:bg-neutral-700 transition-colors duration-300">
+                  <div class="flex items-center mb-4">
+                    <span class="flex items-center justify-center w-12 h-12 bg-indigo-600 rounded-lg">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </span>
+                    <h3 class="ml-4 text-xl font-semibold text-white">Higher Success Rate</h3>
+                  </div>
+                  <p class="text-gray-300">Optimized for ATS systems with industry-specific keywords and formatting that
+                    gets you noticed.</p>
+                </div>
+              </div>
+
+              <div class="relative animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="relative bg-neutral-800 rounded-lg p-8 hover:bg-neutral-700 transition-colors duration-300">
+                  <div class="flex items-center mb-4">
+                    <span class="flex items-center justify-center w-12 h-12 bg-indigo-600 rounded-lg">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </span>
+                    <h3 class="ml-4 text-xl font-semibold text-white">Stand Out</h3>
+                  </div>
+                  <p class="text-gray-300">Modern, professional templates that help you make a lasting impression on
+                    employers.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-16 bg-neutral-800 rounded-lg p-8 animate__animated animate__fadeIn animate__delay-3s">
+              <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="text-center lg:text-left mb-8 lg:mb-0">
+                  <h3 class="text-2xl font-bold text-white">Ready to Transform Your Career?</h3>
+                  <p class="mt-2 text-gray-300">Join our early access list and get 10 Days Free premium features.</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <a href="#earlyAccess"
+                    class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-300">
+                    Get Started Now
+                    <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </htmlCode>
+</element>
+<element id="acc7f2e3-aa0f-402a-abbf-1cdb22344166" data-section-id="acc7f2e3-aa0f-402a-abbf-1cdb22344166">
+
+  <htmlCode>
+    <div id="root">
+      <section id="earlyAccess" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="relative bg-neutral-900 rounded-2xl overflow-hidden">
+            <div class="absolute inset-0">
+              <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 to-neutral-900 opacity-90"></div>
+            </div>
+
+            <div class="relative py-16 px-4 sm:px-6 lg:px-8">
+              <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl animate__animated animate__fadeInDown">
+                  Get Early Access
+                </h2>
+                <p class="mt-4 text-xl text-gray-200 animate__animated animate__fadeIn">
+                  Be among the first to experience Rezume.dev and receive exclusive benefits
+                </p>
+              </div>
+
+              <div class="mt-12 max-w-lg mx-auto">
+                <form id="form" class="grid grid-cols-1 gap-6 sm:grid-cols-2 animate__animated animate__fadeInUp">
+                  <input type="hidden" name="access_key" value="2339f22d-1d07-431f-a2c6-364bf3f1e00d" />
+                  <div class="sm:col-span-2">
+                    <label for="email" class="block text-sm font-medium text-gray-200">Email address</label>
+                    <div class="mt-1">
+                      <input type="email" name="email" id="email" required
+                        class="block w-full px-4 py-3 rounded-md bg-white border-0 focus:ring-2 focus:ring-indigo-500 text-gray-900"
+                        placeholder="Enter your email">
+                    </div>
+                  </div>
+
+                  <div class="sm:col-span-2">
+                    <label for="name" class="block text-sm font-medium text-gray-200">Full name</label>
+                    <div class="mt-1">
+                      <input type="text" name="name" id="name" required
+                        class="block w-full px-4 py-3 rounded-md bg-white border-0 focus:ring-2 focus:ring-indigo-500 text-gray-900"
+                        placeholder="Enter your name">
+                    </div>
+                  </div>
+
+                  <div class="sm:col-span-2">
+                    <button type="submit"
+                      class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 transition-colors duration-300">
+                      Join Early Access List
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+
+              <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3 text-center animate__animated animate__fadeIn">
+                <div class="bg-white/10 rounded-lg p-6">
+                  <div class="text-2xl font-bold text-white mb-2">Early Bird</div>
+                  <p class="text-gray-200">Get 10 Days free premium access</p>
+                </div>
+
+                <div class="bg-white/10 rounded-lg p-6">
+                  <div class="text-2xl font-bold text-white mb-2">Priority</div>
+                  <p class="text-gray-200">First access to new features</p>
+                </div>
+
+                <div class="bg-white/10 rounded-lg p-6">
+                  <div class="text-2xl font-bold text-white mb-2">Exclusive</div>
+                  <p class="text-gray-200">Special launch day bonuses</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          const form = document.getElementById('form');
+
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: json
+            })
+              .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                  alert('Your form has been submitted successfully!');
+                } else {
+                  console.log(response);
+                  alert('Something went wrong!');
+                }
+              })
+              .catch(error => {
+                console.log(error);
+                alert('Something went wrong!');
+              })
+              .then(function () {
+                form.reset();
+                setTimeout(() => {
+                  window.location.reload();
+                }, 3000);
+              });
+          });
+        </script>
+      </section>
+    </div>
+  </htmlCode>
+</element>
+<element id="d34f2235-8961-4a16-9888-1a166dacd985" data-section-id="d34f2235-8961-4a16-9888-1a166dacd985">
+
+  <htmlCode>
+    <div id="root">
+      <section id="howItWorks" class="py-24 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl animate__animated animate__fadeIn">
+              How Rezume.dev Works
+            </h2>
+            <p class="mt-4 text-xl text-gray-300 animate__animated animate__fadeIn">
+              Three simple steps to create your perfect resume
+            </p>
+          </div>
+
+          <div class="mt-20 relative">
+            <div class="absolute top-1/2 left-0 right-0 h-1 bg-indigo-600 transform -translate-y-1/2 hidden lg:block">
+            </div>
+
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+              <div class="relative bg-neutral-800 rounded-xl p-8 animate__animated animate__fadeInLeft">
+                <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                  <span
+                    class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white text-2xl font-bold">
+                    1
+                  </span>
+                </div>
+                <div class="pt-8 text-center">
+                  <h3 class="text-xl font-bold text-white mb-4">Sign Up</h3>
+                  <p class="text-gray-300">Create your account and choose from our professional template collection.</p>
+                  <div class="mt-6">
+                    <svg class="w-16 h-16 mx-auto text-indigo-500" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative bg-neutral-800 rounded-xl p-8 animate__animated animate__fadeInUp">
+                <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                  <span
+                    class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white text-2xl font-bold">
+                    2
+                  </span>
+                </div>
+                <div class="pt-8 text-center">
+                  <h3 class="text-xl font-bold text-white mb-4">Input Your Details</h3>
+                  <p class="text-gray-300">Let our AI assist you in writing compelling content and formatting.</p>
+                  <div class="mt-6">
+                    <svg class="w-16 h-16 mx-auto text-indigo-500" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative bg-neutral-800 rounded-xl p-8 animate__animated animate__fadeInRight">
+                <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                  <span
+                    class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white text-2xl font-bold">
+                    3
+                  </span>
+                </div>
+                <div class="pt-8 text-center">
+                  <h3 class="text-xl font-bold text-white mb-4">Download & Apply</h3>
+                  <p class="text-gray-300">Export your polished resume in multiple formats and start applying.</p>
+                  <div class="mt-6">
+                    <svg class="w-16 h-16 mx-auto text-indigo-500" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-16 text-center">
+              <a href="#earlyAccess"
+                class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 transition-all duration-300 animate__animated animate__pulse animate__infinite">
+                Start Building Your Resume
+                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </htmlCode>
+</element>
+<element id="d9abf989-5205-42b0-a3e9-94c74c918ba8" data-section-id="d9abf989-5205-42b0-a3e9-94c74c918ba8">
+
+  <htmlCode>
+    <div id="root">
+      <section id="testimonials" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-extrabold text-neutral-900 sm:text-4xl animate__animated animate__fadeIn">
+              What Early Users Say
+            </h2>
+            <p class="mt-4 text-xl text-neutral-600 animate__animated animate__fadeIn">
+              Join hundreds of satisfied professionals who've already tested Rezume.dev
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-3" id="testimonialSlides">
+            <div
+              class="bg-neutral-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 animate__animated animate__fadeInLeft">
+              <div class="flex items-center mb-6">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center">
+                    <span class="text-white font-semibold text-lg">BS</span>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-neutral-900">Bhanu Pratap Singh</h3>
+                  <p class="text-neutral-600">Software Engineer</p>
+                </div>
+              </div>
+              <div class="relative">
+                <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-neutral-200"
+                  fill="currentColor" viewBox="0 0 32 32">
+                  <path
+                    d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                </svg>
+                <p class="relative text-neutral-600 mt-4">
+                  Rezume.dev streamlined my job application process. The AI suggestions were incredibly helpful, and
+                  the templates are modern and professional.
+                </p>
+              </div>
+              <div class="mt-6 flex items-center">
+                <div class="flex text-indigo-500">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-neutral-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 animate__animated animate__fadeIn">
+              <div class="flex items-center mb-6">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center">
+                    <span class="text-white font-semibold text-lg">RP</span>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-neutral-900">Ritik Pal</h3>
+                  <p class="text-neutral-600">Full Stack Dev</p>
+                </div>
+              </div>
+              <div class="relative">
+                <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-neutral-200"
+                  fill="currentColor" viewBox="0 0 32 32">
+                  <path
+                    d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                </svg>
+                <p class="relative text-neutral-600 mt-4">
+                  The customization options are impressive, and the AI writing assistance helped me highlight my
+                  achievements effectively.
+                </p>
+              </div>
+              <div class="mt-6 flex items-center">
+                <div class="flex text-indigo-500">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-neutral-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 animate__animated animate__fadeInRight">
+              <div class="flex items-center mb-6">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center">
+                    <span class="text-white font-semibold text-lg">AG</span>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-neutral-900">Anupam Gupta </h3>
+                  <p class="text-neutral-600">Recent Graduate</p>
+                </div>
+              </div>
+              <div class="relative">
+                <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-neutral-200"
+                  fill="currentColor" viewBox="0 0 32 32">
+                  <path
+                    d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                </svg>
+                <p class="relative text-neutral-600 mt-4">
+                  Perfect for entry-level professionals! The templates are modern and the AI suggestions helped me
+                  showcase my internship experience effectively.
+                </p>
+              </div>
+              <div class="mt-6 flex items-center">
+                <div class="flex text-indigo-500">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </htmlCode>
+</element>
+<element id="82e46de8-a5f8-4176-bd4d-7b0b27dd65fd" data-section-id="82e46de8-a5f8-4176-bd4d-7b0b27dd65fd">
+
+  <htmlCode>
+    <div id="root">
+      <section id="newsletter" class="py-24 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="relative bg-gradient-to-r from-indigo-600 to-indigo-800 rounded-2xl overflow-hidden">
+            <div class="absolute inset-0">
+              <div class="absolute inset-0 bg-gradient-to-br from-black to-transparent opacity-50"></div>
+              <div
+                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNGRkYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRoMnYyaC0yek00MCA0MGgydjJoLTJ6TTQwIDM0aDJ2MmgtMnpNMzYgNDBoMnYyaC0yeiIvPjwvZz48L2c+PC9zdmc+')] opacity-10">
+              </div>
+            </div>
+
+            <div class="relative px-6 py-16 sm:px-12 lg:px-20">
+              <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl animate__animated animate__fadeInDown">
+                  Stay Updated
+                </h2>
+                <p class="mt-4 text-xl text-gray-200 animate__animated animate__fadeIn">
+                  Follow Us On Social Media For Updates
+                </p>
+              </div>
+
+              <div class="flex justify-center pt-8 items-center gap-4">
+                <div class="social-button">
+                  <a href="https://instagram.com/csexplained" target="_blank"
+                    class="relative w-12 h-12 rounded-full group">
+                    <button class="relative w-12 h-12 rounded-full group">
+                      <div
+                        class="floater w-full h-full absolute top-0 left-0 bg-violet-400 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl">
+                      </div>
+                      <div
+                        class="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-violet-400 rounded-full">
+                        <svg fill="none" viewBox="0 0 22 22" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M21.94 6.46809C21.8884 5.2991 21.6994 4.49551 21.4285 3.79911C21.1492 3.05994 20.7194 2.39818 20.1564 1.84802C19.6062 1.28932 18.9401 0.855163 18.2094 0.580194C17.5091 0.309437 16.7096 0.120336 15.5407 0.0688497C14.363 0.0128932 13.9891 0 11.0022 0C8.01527 0 7.64141 0.0128932 6.46808 0.064466C5.29914 0.116039 4.49551 0.305225 3.79932 0.57581C3.05994 0.855163 2.39818 1.28494 1.84802 1.84802C1.28932 2.39813 0.855377 3.06428 0.580193 3.7949C0.309437 4.49551 0.120379 5.2948 0.0688496 6.4637C0.0129362 7.64141 0 8.01527 0 11.0022C0 13.9891 0.0129362 14.363 0.0644659 15.5363C0.116039 16.7053 0.305225 17.5089 0.576025 18.2053C0.855377 18.9444 1.28932 19.6062 1.84802 20.1564C2.39818 20.7151 3.06432 21.1492 3.79494 21.4242C4.49547 21.6949 5.29476 21.884 6.46391 21.9355C7.63702 21.9873 8.0111 22 10.998 22C13.9849 22 14.3588 21.9873 15.5321 21.9355C16.7011 21.884 17.5047 21.695 18.2009 21.4242C18.9321 21.1415 19.5961 20.7091 20.1505 20.1548C20.7048 19.6005 21.1373 18.9365 21.42 18.2053C21.6906 17.5047 21.8798 16.7052 21.9314 15.5363C21.9829 14.363 21.9958 13.9891 21.9958 11.0022C21.9958 8.01527 21.9914 7.64137 21.94 6.46809ZM19.9588 15.4503C19.9114 16.5248 19.731 17.105 19.5805 17.4918C19.2109 18.4502 18.4502 19.2109 17.4918 19.5805C17.105 19.731 16.5206 19.9114 15.4503 19.9586C14.29 20.0103 13.942 20.023 11.0066 20.023C8.07118 20.023 7.71881 20.0103 6.56259 19.9586C5.48816 19.9114 4.90796 19.731 4.52117 19.5805C4.04425 19.4043 3.61014 19.1249 3.25772 18.7596C2.89242 18.4029 2.61306 17.9731 2.43677 17.4961C2.28635 17.1094 2.10589 16.5248 2.05874 15.4547C2.007 14.2943 1.99428 13.9461 1.99428 11.0107C1.99428 8.07535 2.007 7.72298 2.05874 6.56698C2.10589 5.49254 2.28635 4.91235 2.43677 4.52555C2.61306 4.04842 2.89241 3.61439 3.26211 3.26189C3.61865 2.89658 4.04842 2.61723 4.52555 2.44115C4.91235 2.29073 5.49692 2.11023 6.56697 2.06291C7.72736 2.01134 8.07556 1.99844 11.0107 1.99844C13.9505 1.99844 14.2985 2.01134 15.4547 2.06291C16.5292 2.11027 17.1093 2.29069 17.4961 2.44111C17.9731 2.61723 18.4072 2.89658 18.7596 3.26189C19.1249 3.61865 19.4042 4.04842 19.5805 4.52555C19.731 4.91235 19.9114 5.49671 19.9587 6.56698C20.0103 7.72736 20.0232 8.07535 20.0232 11.0107C20.0232 13.9461 20.0104 14.29 19.9588 15.4503Z"
+                            class="group-hover:fill-[#171543] fill-white duration-300"></path>
+                          <path
+                            d="M11.0026 5.35054C7.88252 5.35054 5.35107 7.88182 5.35107 11.0021C5.35107 14.1223 7.88252 16.6536 11.0026 16.6536C14.1227 16.6536 16.6541 14.1223 16.6541 11.0021C16.6541 7.88182 14.1227 5.35054 11.0026 5.35054ZM11.0026 14.668C8.97844 14.668 7.33654 13.0264 7.33654 11.0021C7.33654 8.97774 8.97844 7.33609 11.0025 7.33609C13.0269 7.33609 14.6685 8.97774 14.6685 11.0021C14.6685 13.0264 13.0268 14.668 11.0026 14.668ZM18.1971 5.12706C18.1971 5.85569 17.6063 6.44646 16.8775 6.44646C16.1489 6.44646 15.5581 5.85569 15.5581 5.12706C15.5581 4.39833 16.1489 3.80774 16.8775 3.80774C17.6063 3.80774 18.1971 4.39829 18.1971 5.12706Z"
+                            class="group-hover:fill-[#171543] fill-white duration-300"></path>
+                        </svg>
+                      </div>
+                    </button>
+                </div>
+                <div class="social-button">
+                  <a href="https://x.com/manwithcodes" target="_blank" class="relative w-12 h-12 rounded-full group">
+                    <button class="relative w-12 h-12 rounded-full group">
+                      <div
+                        class="floater w-full h-full absolute top-0 left-0 bg-black rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl">
+                      </div>
+                      <div
+                        class="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-black rounded-full">
+                        <svg fill="none" viewBox="0 0 22 22" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.8115 9.3155L20.8253 0H18.9263L11.9679 8.08852L6.41015 0H0L8.40433 12.2313L0 22H1.89914L9.24745 13.4583L15.1168 22H21.5269L12.811 9.3155H12.8115ZM10.2103 12.339L9.35878 11.1211L2.58343 1.42964H5.5004L10.9682 9.25094L11.8197 10.4689L18.9272 20.6354H16.0102L10.2103 12.3395V12.339Z"
+                            class="group-hover:fill-[#171543] fill-white duration-300"></path>
+                        </svg>
+                      </div>
+                    </button>
+                </div>
+                <div class="social-button">
+                  <a href="https://discord.gg/ytQ7mAHZne" target="_blank"
+                    class="relative w-12 h-12 rounded-full group">
+                    <button class="relative w-12 h-12 rounded-full group">
+                      <div
+                        class="floater w-full h-full absolute top-0 left-0 bg-blue-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl">
+                      </div>
+                      <div
+                        class="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-blue-500 rounded-full">
+                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                          <path
+                            d="M39.248,10.177c-2.804-1.287-5.812-2.235-8.956-2.778c-0.057-0.01-0.114,0.016-0.144,0.068	c-0.387,0.688-0.815,1.585-1.115,2.291c-3.382-0.506-6.747-0.506-10.059,0c-0.3-0.721-0.744-1.603-1.133-2.291	c-0.03-0.051-0.087-0.077-0.144-0.068c-3.143,0.541-6.15,1.489-8.956,2.778c-0.024,0.01-0.045,0.028-0.059,0.051	c-5.704,8.522-7.267,16.835-6.5,25.044c0.003,0.04,0.026,0.079,0.057,0.103c3.763,2.764,7.409,4.442,10.987,5.554	c0.057,0.017,0.118-0.003,0.154-0.051c0.846-1.156,1.601-2.374,2.248-3.656c0.038-0.075,0.002-0.164-0.076-0.194	c-1.197-0.454-2.336-1.007-3.432-1.636c-0.087-0.051-0.094-0.175-0.014-0.234c0.231-0.173,0.461-0.353,0.682-0.534	c0.04-0.033,0.095-0.04,0.142-0.019c7.201,3.288,14.997,3.288,22.113,0c0.047-0.023,0.102-0.016,0.144,0.017	c0.22,0.182,0.451,0.363,0.683,0.536c0.08,0.059,0.075,0.183-0.012,0.234c-1.096,0.641-2.236,1.182-3.434,1.634	c-0.078,0.03-0.113,0.12-0.075,0.196c0.661,1.28,1.415,2.498,2.246,3.654c0.035,0.049,0.097,0.07,0.154,0.052	c3.595-1.112,7.241-2.79,11.004-5.554c0.033-0.024,0.054-0.061,0.057-0.101c0.917-9.491-1.537-17.735-6.505-25.044	C39.293,10.205,39.272,10.187,39.248,10.177z M16.703,30.273c-2.168,0-3.954-1.99-3.954-4.435s1.752-4.435,3.954-4.435	c2.22,0,3.989,2.008,3.954,4.435C20.658,28.282,18.906,30.273,16.703,30.273z M31.324,30.273c-2.168,0-3.954-1.99-3.954-4.435	s1.752-4.435,3.954-4.435c2.22,0,3.989,2.008,3.954,4.435C35.278,28.282,33.544,30.273,31.324,30.273z"
+                            class="fill-zinc-200"></path>
+                        </svg>
+                      </div>
+                    </button>
+                </div>
+                <div class="social-button">
+                  <a href="https://www.youtube.com/@CSExplained_official?sub_confirmation=1" target="_blank"
+                    class="relative rounded-full group">
+                    <button class="relative w-12 h-12 rounded-full group">
+                      <div
+                        class="floater w-full h-full absolute top-0 left-0 bg-red-400 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl">
+                      </div>
+                      <div
+                        class="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-red-400 rounded-full">
+                        <svg fill="none" viewBox="0 0 30 22" height="22" width="30" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M18.9945 9.70081L12.5775 6.18974C12.2085 5.98783 11.7724 5.99538 11.4108 6.20965C11.0489 6.42415 10.833 6.80311 10.833 7.22372V14.1857C10.833 14.6043 11.0476 14.9826 11.407 15.1973C11.5947 15.3094 11.8028 15.3657 12.0113 15.3657C12.2064 15.3654 12.3984 15.3166 12.57 15.2237L18.9872 11.7731C19.1742 11.6726 19.3305 11.5235 19.4397 11.3415C19.5489 11.1596 19.6069 10.9515 19.6077 10.7393C19.6086 10.527 19.552 10.3184 19.4441 10.1356C19.3362 9.95283 19.1808 9.80259 18.9945 9.70081ZM12.5352 13.3099V8.10662L17.3312 10.7308L12.5352 13.3099Z"
+                            class="group-hover:fill-[#171543] fill-white duration-300"></path>
+                          <path
+                            d="M28.8325 5.19239L28.8312 5.17912C28.8065 4.94533 28.5617 2.86581 27.5508 1.80806C26.3822 0.56396 25.0574 0.412829 24.4203 0.340384C24.3722 0.335071 24.3241 0.329304 24.276 0.323081L24.2253 0.317805C20.3854 0.0385769 14.5862 0.000453846 14.5282 0.000226923L14.5231 0L14.518 0.000226923C14.4599 0.000453846 8.66074 0.0385769 4.7862 0.317805L4.73503 0.323081C4.69379 0.328641 4.64834 0.333747 4.59893 0.339533C3.96916 0.412149 2.65857 0.563563 1.48674 1.8526C0.523851 2.89905 0.245531 4.93404 0.216938 5.16272L0.213648 5.19239C0.204968 5.28969 0 7.60572 0 9.93077V12.1042C0 14.4293 0.204968 16.7453 0.213648 16.8428L0.21518 16.8574C0.239801 17.0875 0.484424 19.1289 1.49071 20.1871C2.58947 21.3895 3.97869 21.5486 4.72595 21.6341C4.84407 21.6476 4.94578 21.6592 5.01511 21.6714L5.08228 21.6807C7.29943 21.8916 14.2509 21.9955 14.5456 21.9998L14.5545 22L14.5634 21.9998C14.6214 21.9995 20.4204 21.9614 24.2604 21.6822L24.3111 21.6769C24.3597 21.6705 24.4142 21.6647 24.474 21.6585C25.1003 21.592 26.4037 21.454 27.5594 20.1823C28.5223 19.1358 28.8008 17.1007 28.8292 16.8723L28.8325 16.8426C28.8412 16.7451 29.0464 14.4293 29.0464 12.1042V9.93077C29.0461 7.60566 28.8412 5.28991 28.8325 5.19239ZM27.344 12.1042C27.344 14.2563 27.1561 16.4725 27.1383 16.6759C27.0661 17.2364 26.7724 18.5239 26.3033 19.0338C25.58 19.8296 24.837 19.9085 24.2945 19.9659C24.234 19.9721 24.1736 19.9789 24.1132 19.9863C20.3991 20.2549 14.8189 20.296 14.5619 20.2976C14.2736 20.2934 7.42372 20.1886 5.2742 19.989C5.16403 19.971 5.04501 19.9572 4.91963 19.9431C4.2834 19.8702 3.41247 19.7704 2.74282 19.0338L2.72705 19.017C2.26611 18.5368 1.98092 17.3328 1.90842 16.6826C1.89492 16.5288 1.70215 14.2864 1.70215 12.1042V9.93077C1.70215 7.78124 1.88964 5.56738 1.9078 5.35975C1.99403 4.69957 2.29317 3.49007 2.74282 3.00117C3.48826 2.18124 4.27432 2.09041 4.7942 2.03034C4.84384 2.02455 4.89013 2.01927 4.93291 2.01371C8.70107 1.74379 14.3214 1.70368 14.5231 1.70215C14.7247 1.70345 20.3431 1.74379 24.0778 2.01371C24.1236 2.0195 24.1737 2.02523 24.2275 2.03147C24.7623 2.0924 25.5705 2.18459 26.3122 2.9757L26.319 2.98301C26.78 3.46324 27.0652 4.68828 27.1376 5.35152C27.1505 5.4967 27.344 7.74397 27.344 9.93077V12.1042Z"
+                            class="group-hover:fill-[#171543] fill-white duration-300"></path>
+                        </svg>
+                      </div>
+                    </button>
+                </div>
+              </div>
+
+              <div class="mt-12 flex justify-center space-x-6 animate__animated animate__fadeIn">
+                <div class="flex items-center">
+                  <svg class="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-2 text-gray-200">Launch Updates</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-2 text-gray-200">Exclusive Offers</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-2 text-gray-200">Early Access</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </htmlCode>
+</element>
+<element id="c20e8f98-19d1-4d46-b9b9-23def2341f6d" data-section-id="c20e8f98-19d1-4d46-b9b9-23def2341f6d">
+
+  <htmlCode>
+    <div id="root">
+      <footer id="footer" class="bg-neutral-900">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div class="mt-12 border-t border-neutral-800 pt-8">
+            <p class="text-base text-gray-400 text-center">
+              &copy; 2025 Rezume.dev by CSX. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </htmlCode>
+</element>
+<div id="page_complete">
+  <script>
+    console.log('Page complete');
+  </script>
+  </body>
+
+  </html>
